@@ -86,7 +86,7 @@ body{
     transition: 0.5s;
 } */
 
-.navbar a:hover,.navbar2 a:hover{
+.navbar a:active,.navbar2 a:active{
     color: #ff004f;
 }
 
@@ -108,7 +108,7 @@ body{
     transition: 0.5s;
 }
 
-.social-nav a:hover{
+.social-nav a:active{
     transform: translateY(-8px);
 }
 
@@ -188,13 +188,14 @@ body{
 .nav-socials a{
     color: #fff;
     font-size: 30px;
-    transition: 0.5s;
-    margin-right: 30px;
+    margin-right: 10px;
+    padding: 8px 12px;
+    border-radius: 50%;
+    transition: all .5s ease-in-out;
 }
 
-.nav-socials a:hover{
-    transform: translateX(-8px);
-    color: #ff004f;
+.nav-socials a:active{
+    background-color: #abababaa;
 }
 
 
@@ -381,6 +382,10 @@ body{
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
+}
+
+.alternate-sevice2{
+    display: none;    
 }
 
 .services-list div i{
@@ -673,8 +678,12 @@ form .btn2{
 
  /* ------hovers------- */
 
- nav ul li a:hover::after{
-    width: 100%;
+.navbar a:hover{
+    color: #ff004f;
+}
+
+.nav-socials a:hover{
+    background-color: #abababaa;
 }
 
 .cv-btn:hover{
@@ -801,6 +810,16 @@ form .btn2{
     }
     .box1{
         margin-top: -20px;
+    }
+}
+
+@media only screen and (max-width: 581px){
+    .alternate-sevice1{
+        display: none;
+    }
+
+    .alternate-sevice2{
+        display: block;
     }
 }
 
