@@ -431,7 +431,7 @@ body{
 /* ----------------------------about----------------------- */
 #about{
     padding-top: 80px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     color: #ababab;
 }
 
@@ -503,7 +503,7 @@ body{
     left: 10px;
 }
 
-.about-image span{
+.about-col-1 span{
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -520,11 +520,12 @@ body{
 .about-col-2{
     /* flex-basis: 30%; */
     margin-top: 20px;
-    padding: 0 15%;
+    /* padding: 0 10%; */
 }
 
 .about-col-2 p{
     font-size: 25px;
+    font-size: clamp(15px, 2.5vw, 25px);
     line-height: 32px;
 }
 
@@ -661,7 +662,7 @@ body{
 
 .social-icons a:hover{
     color: #ff004f;
-    transform: translateY(-5px);
+    /* transform: translateY(-5px); */
 }
 
 .btn2{
@@ -890,6 +891,13 @@ form .btn2{
     }
 }
 
+@media only screen and (max-width: 661px){
+    .about-col-1 img{
+        width: 250px;
+        height: auto;
+    }
+}
+
 @media only screen and (max-width: 581px){
     .alternate-sevice1{
         display: none;
@@ -916,6 +924,17 @@ form .btn2{
     }
 }
 
+@media only screen and (max-width: 470px){
+    .about-col-1 img{
+        width: 200px;
+        height: auto;
+    }
+    
+    .contact-left p{
+        font-size: 20px;
+    }
+}
+
 @media only screen and (max-width: 405px){
     .header-text h1{
         font-size: 25px;
@@ -925,11 +944,6 @@ form .btn2{
     }
 }
 
-@media only screen and (max-width: 470px){
-    .contact-left p{
-        font-size: 20px;
-    }
-}
 
 @media only screen and (max-width: 362px){
     .header-text h1{
