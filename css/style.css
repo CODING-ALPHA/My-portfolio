@@ -793,7 +793,7 @@ form .btn2{
 	.navbar2{
         display: block;
 		position: fixed;
-		top: 8%;
+		top: 10%;
 		right: -100%;
 		/* transform: translateX(100%); */
 		width: max-content;
