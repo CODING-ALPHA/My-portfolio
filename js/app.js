@@ -5,7 +5,7 @@ let navLinks = document.querySelectorAll(".navbar2 a");
 let background = document.querySelector(".navbar2-backgrnd");
 let backgroundClose = document.querySelector(".navbar2-backgrnd");
 
-// CODE FOR NAVBAR
+// // CODE FOR NAVBAR
 for (i = 0; i < navLinks.length; i++) {
   navLinks[i].addEventListener("click", () => {
     navbar.style.transform = "translateX(500px)";
