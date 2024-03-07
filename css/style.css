@@ -520,10 +520,10 @@ section {
 }
 
 .popup .popup-content .popup-text {
-  /* background-color: yellow; */
   padding: 20px 15px 0px 20px;
   flex-basis: 65%;
-  transition: 10s;
+  transition: 0.5s ease;
+  height: max-content;
 }
 
 .popup .popup-content .popup-text h1 {
@@ -1157,7 +1157,6 @@ form .btn2 {
   }
   .popup .popup-content {
     width: 90%;
-    height: 80%;
     overflow-y: scroll;
   }
 }
