@@ -28,7 +28,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>Coding-Alpha projects</title>
+    <title>Coding-Alpha's portfolio</title>
   </head>
   <body>
     <!-- ----------------------header section----------------------- -->
@@ -53,12 +53,16 @@
           </ul>
 
           <div class="main">
-            <div class="bx bx-menu" id="menu-icon"></div>
+            <!-- <div class="bx bx-menu" id="menu-icon"></div> -->
+            <i class="fa-solid fa-bars" id="menu-open-icon"></i>
           </div>
         </div>
       </div>
 
       <ul class="navbar2">
+        <div class="navbar2-main">
+          <i class="fa-solid fa-xmark" id="menu-close-icon"></i>
+        </div>
         <li><a href="#header">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#projects">projects</a></li>
@@ -229,51 +233,67 @@
 
         <div class="work-list">
           <!---------------------PROJECT-1------------------------------->
-          <div class="work" data-aos="zoom-in" data-aos-duration="1500">
-            <img
-              src="images/portfolio-website.png"
-              alt=""
-              onclick="togglePopup()"
-            />
-            <div class="layer" onclick="togglePopup()">
+          <div
+            class="work show-modal"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
+            <img src="images/portfolio-website.png" alt="" />
+            <div class="layer">
               <h1>My Portfolio Website</h1>
               <p>click me</p>
             </div>
           </div>
 
           <!---------------------PROJECT-2------------------------------->
-          <div class="work" data-aos="zoom-in" data-aos-duration="1500">
-            <img src="images/blogr web.png" alt="" onclick="togglePopup2()" />
+          <div
+            class="work show-modal"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
+            <img src="images/blogr web.png" alt="" />
 
-            <div class="layer" onclick="togglePopup2()">
+            <div class="layer">
               <h1>Blogr landing page</h1>
               <p>click me</p>
             </div>
           </div>
 
           <!---------------------PROJECT-3------------------------------->
-          <div class="work" data-aos="zoom-in" data-aos-duration="1500">
-            <img src="images/workit web.png" alt="" onclick="togglePopup3()" />
+          <div
+            class="work show-modal"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
+            <img src="images/tipCalc.png" alt="" />
 
-            <div class="layer" onclick="togglePopup3()">
-              <h1>Workit landing page</h1>
+            <div class="layer">
+              <h1>JavaScript Tip Calculator</h1>
               <p>click me</p>
             </div>
           </div>
           <!---------------------PROJECT-4------------------------------->
-          <div class="work" data-aos="zoom-in" data-aos-duration="1500">
-            <img src="images/counter.png" alt="" onclick="togglePopup3()" />
+          <div
+            class="work show-modal"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
+            <img src="images/counter.png" alt="" />
 
-            <div class="layer" onclick="togglePopup3()">
+            <div class="layer">
               <h1>Counter App</h1>
               <p>click me</p>
             </div>
           </div>
           <!---------------------PROJECT-5------------------------------->
-          <div class="work" data-aos="zoom-in" data-aos-duration="1500">
-            <img src="images/GuessGame.png" alt="" onclick="togglePopup3()" />
+          <div
+            class="work show-modal"
+            data-aos="zoom-in"
+            data-aos-duration="1500"
+          >
+            <img src="images/GuessGame.png" alt="" />
 
-            <div class="layer" onclick="togglePopup3()">
+            <div class="layer">
               <h1>GuessTheGame App</h1>
               <p>click me</p>
             </div>
@@ -282,10 +302,11 @@
 
         <!-- ===========================Project's Popup=============================== -->
 
-        <div class="popup" id="popup-1" onclick="togglePopup()">
+        <!--======================POPUP-1 MY PORTFOLIO============================-->
+        <div class="popup" id="popup-1">
           <div class="popup-content">
-            <div class="popup-text" onclick="togglePopup()">
-              <span onclick="togglePopup()">&times;</span>
+            <div class="popup-text">
+              <span class="close-modal">&times;</span>
 
               <h1>My portfolio</h1>
               <p>
@@ -309,10 +330,12 @@
           </div>
         </div>
 
-        <div class="popup" id="popup-2" onclick="togglePopup2()">
+        <!--======================POPUP-2 BLOGR============================-->
+
+        <div class="popup" id="popup-2">
           <div class="popup-content">
-            <div class="popup-text" onclick="togglePopup2()">
-              <span onclick="togglePopup2()">&times;</span>
+            <div class="popup-text">
+              <span class="close-modal">&times;</span>
 
               <h1>Blogr landing page</h1>
               <p>
@@ -349,19 +372,20 @@
           </div>
         </div>
 
-        <div class="popup" id="popup-3" onclick="togglePopup3()">
-          <div class="popup-content">
-            <div class="popup-text" onclick="togglePopup3()">
-              <span onclick="togglePopup3()">&times;</span>
+        <!--======================POPUP-3 WORKIT============================-->
 
-              <h1>Workit landing page</h1>
+        <div class="popup" id="popup-3">
+          <div class="popup-content">
+            <div class="popup-text">
+              <span class="close-modal">&times;</span>
+
+              <h1>JavaScript Tip Calculator</h1>
               <p>
-                This is a Frontend Mentor challenge that i created using HTML,
-                CSS and a little touch of JS for the animations. It was an
-                excellent test of my UI and responsive skills. The design of the
-                landing page includes some curved section borders that i had fun
-                creating. If you’re interested in challenges like this, you can
-                check out
+                This Frontend Mentor Tip Calculator project is a simple web app
+                that I created to practice DOM manipulation using HTML, CSS, and
+                JavaScript. It provides users with the ability to calculate tips
+                based on a bill amount. If you’re interested in challenges like
+                this, you can check out
                 <a
                   href="https://www.frontendmentor.io/challenges"
                   target="_blank"
@@ -374,12 +398,83 @@
 
               <div class="popup-btns">
                 <button class="cv-btn">
-                  <a href="https://workit-webpg.vercel.app/" target="_blank"
+                  <a
+                    href="https://tip-calculator-beta-inky.vercel.app/"
+                    target="_blank"
                     >View Live</a
                   >
                 </button>
                 <button>
-                  <a href="https://github.com/CODING-ALPHA/workit-webpg"
+                  <a href="https://github.com/CODING-ALPHA/Tip-Calculator"
+                    >View On GitHub</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--======================POPUP-4 COUNTER APP============================-->
+
+        <div class="popup" id="popup-3">
+          <div class="popup-content">
+            <div class="popup-text">
+              <span class="close-modal">&times;</span>
+
+              <h1>Counter App</h1>
+              <p>
+                This Counter App is a simple project that I built using what i
+                learnt about DOM manipulation using HTML, CSS, and JavaScript.
+                It allows users to increment or decrement a number by clicking
+                either the "+" or "-" buttons and reset the counter back to
+                default using the "Reset" button.
+              </p>
+
+              <div class="popup-btns">
+                <button class="cv-btn">
+                  <a
+                    href="https://counter-app-one-theta.vercel.app/"
+                    target="_blank"
+                    >View Live</a
+                  >
+                </button>
+                <button>
+                  <a href="https://github.com/CODING-ALPHA/Counter-App"
+                    >View On GitHub</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--======================POPUP-5 WORKIT============================-->
+
+        <div class="popup" id="popup-3">
+          <div class="popup-content">
+            <div class="popup-text">
+              <span class="close-modal">&times;</span>
+
+              <h1>Guess The Game</h1>
+              <p>
+                This is a HTML,CSS and JAVASCRIPT game that i learnt how to
+                build from my javascript course. The game prompts the player to
+                input a guessed number, the game checks if the guessed number is
+                correct and then tells the player if he/she won or lost. For
+                every number guessed wrong the player's score is subtracted by 1
+                till the player loses.
+              </p>
+
+              <div class="popup-btns">
+                <button class="cv-btn">
+                  <a
+                    href="https://guessthenumbergame.vercel.app/"
+                    target="_blank"
+                    >View Live</a
+                  >
+                </button>
+                <button>
+                  <a href="https://github.com/CODING-ALPHA/GuessTheNumberGame"
                     >View On GitHub</a
                   >
                 </button>
@@ -475,7 +570,7 @@
             <h1 data-aos="zoom-in" data-aos-duration="1000">
               Let's get in touch
             </h1>
-            <p>
+            <p data-aos="zoom-in" data-aos-duration="1200">
               I am a web developer who is dedicated to providing high-quality,
               user-friendly websites and web applications. <br />
               I am excited to hear more about your project and how I can help
@@ -648,7 +743,6 @@
     </div>
 
     <!-- <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script> -->
-
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <script src="js/app.js"></script>

@@ -1,63 +1,38 @@
-let menu = document.querySelector("#menu-icon");
+let menuOpen = document.querySelector("#menu-open-icon");
+let menuClose = document.querySelector("#menu-close-icon");
 let navbar = document.querySelector(".navbar2");
+let navLinks = document.querySelectorAll(".navbar2 a");
 let background = document.querySelector(".navbar2-backgrnd");
 let backgroundClose = document.querySelector(".navbar2-backgrnd");
 
-menu.onclick = () => {
-  menu.classList.toggle("bx-x");
-  navbar.classList.toggle("open");
-  background.classList.toggle("reveal");
-};
-
-// function scrollvalue(){
-//    var navbar = document.getElementById('nav-fixed');
-//    var scroll = window.scrollY;
-//    if (scroll > 120) {
-//       navbar.classList.add('bgcolor');
-//    } else {
-//       navbar.classList.remove('bgcolor');
-//    }
-//  }
-
-//  window.addEventListener('scroll', scrollvalue);
-
-// document.addEventListener('scroll', () => {
-//    // const header = document.querySelector('header');
-//    var header = document.getElementById('nav-fixed');
-
-//    if (window.scrollY > 0) {
-//       header.classList.add('bgcolor');
-//    } else{
-//       header.classList.remove('bgcolor')
-//    }
-// });
-
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
-
-function opentab(tabname) {
-  for (tablink of tablinks) {
-    tablink.classList.remove("active-link");
-  }
-  for (tabcontent of tabcontents) {
-    tabcontent.classList.remove("active-tab");
-  }
-  event.currentTarget.classList.add("active-link");
-  document.getElementById(tabname).classList.add("active-tab");
+// CODE FOR NAVBAR
+for (i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", () => {
+    navbar.style.transform = "translateX(500px)";
+  });
 }
 
-// // -------------------TYPEWRITER ANIMATION FOR SPAN TAG NAMED:"#TYPING"-----------------
-// var options = {
-//   strings: ['yomide.', 'kinbinu.'],
-//   typeSpeed: 100,
-//   // startDelay: 100,
-//   backSpeed: 200,
-//   // backDelay: 500,
-//   // startDelay: 1000,
-//   loop: true,
-// };
+menuOpen.addEventListener("click", () => {
+  navbar.style.transform = "translateX(0px)";
+});
 
-// var typed = new Typed('#logo-typo', options);
+menuClose.addEventListener("click", () => {
+  navbar.style.transform = "translateX(500px)";
+});
+
+// var tablinks = document.getElementsByClassName("tab-links");
+// var tabcontents = document.getElementsByClassName("tab-contents");
+
+// function opentab(tabname) {
+//   for (tablink of tablinks) {
+//     tablink.classList.remove("active-link");
+//   }
+//   for (tabcontent of tabcontents) {
+//     tabcontent.classList.remove("active-tab");
+//   }
+//   event.currentTarget.classList.add("active-link");
+//   document.getElementById(tabname).classList.add("active-tab");
+// }
 
 // -------------------TYPEWRITER ANIMATION FOR SPAN TAG NAMED:"#TYPING"-----------------
 var options = {
@@ -84,25 +59,21 @@ var typed = new Typed("#typing", options);
 //   document.getElementById("popup-3").classList.toggle("active");
 // }
 
-const modal = document.querySelector(".modal");
-const overlay = document.querySelector(".overlay");
-const btnCloseModal = document.querySelector(".close-modal");
-const btnsOpenModal = document.querySelectorAll(".show-modal");
-const openModal = function () {
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-};
+// const modal = document.querySelector(".popup");
+// const btnCloseModal = document.querySelector(".close-modal");
+// const btnsOpenModal = document.querySelectorAll(".show-modal");
+// const openModal = function () {
+//   modal.classList.add("active");
+// };
 
-const closeModal = function () {
-  modal.classList.add("hidden");
-  overlay.classList.add("hidden");
-};
+// const closeModal = function () {
+//   modal.classList.remove("active");
+// };
 
-for (let i = 0; i < btnsOpenModal.length; i++)
-  btnsOpenModal[i].addEventListener("click", openModal);
+// for (let i = 0; i < btnsOpenModal.length; i++)
+//   btnsOpenModal[i].addEventListener("click", openModal);
 
-btnCloseModal.addEventListener("click", closeModal);
-overlay.addEventListener("click", closeModal);
+// btnCloseModal.addEventListener("click", closeModal);
 
 // document.addEventListener("keydown", function (e) {
 //   console.log(e.key);
@@ -111,3 +82,30 @@ overlay.addEventListener("click", closeModal);
 //   //   closeModal();
 //   // }
 // });
+
+const modals = document.querySelectorAll(".popup");
+const btnCloseModals = document.querySelectorAll(".close-modal");
+const btnsOpenModals = document.querySelectorAll(".show-modal");
+
+const openModal = function (modal) {
+  modal.classList.add("active");
+};
+
+const closeModal = function (modal) {
+  modal.classList.remove("active");
+};
+
+btnsOpenModals.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    openModal(modals[index]);
+  });
+  // btnCloseModal.addEventListener("click", closeModal);
+
+  btnCloseModals[index].addEventListener("click", () => {
+    closeModal(modals[index]);
+  });
+
+  modals[index].addEventListener("click", () => {
+    closeModal(modals[index]);
+  });
+});
