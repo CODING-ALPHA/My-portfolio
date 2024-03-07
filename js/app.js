@@ -20,6 +20,19 @@ menuClose.addEventListener("click", () => {
   navbar.style.transform = "translateX(500px)";
 });
 
+const element = document.getElementById("scroll-up-arrow");
+const scrollLength = 550;
+
+window.addEventListener("scroll", function () {
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition >= scrollLength) {
+    element.style.display = "block";
+  } else {
+    element.style.display = "none";
+  }
+});
+
 // var tablinks = document.getElementsByClassName("tab-links");
 // var tabcontents = document.getElementsByClassName("tab-contents");
 
