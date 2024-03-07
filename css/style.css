@@ -32,6 +32,8 @@ section {
 .container1 {
   display: flex;
   align-items: center;
+  justify-content: center;
+  /* padding: 10% 6%; */
   /* background-color: yellow; */
   height: 100%;
 }
@@ -149,10 +151,14 @@ section {
   /* margin-top: 6%; */
   /* padding-top: 10%; */
   /* padding-bottom: 5%; */
-  font-size: 20px;
+  font-size: 26px;
+  /* background-color: yellow; */
+  width: 100%;
   /* padding: 8rem 0 7rem 0; */
 }
-
+.header-text p {
+  font-size: 26px;
+}
 .header-text h1 {
   font-weight: 800;
   font-size: 50px;
@@ -185,9 +191,6 @@ section {
 
 .cv-btn:hover {
   border-radius: 0;
-  /* color: ; */
-  /* border: 1px solid #ff004f; */
-  /* background: transparent; */
 }
 
 .cv-btn::before {
@@ -250,64 +253,6 @@ section {
 }
 
 /* =====================Background header animation======================= */
-.box1 {
-  position: relative;
-  margin-top: -60px;
-  margin-left: 50%;
-  /* background-color: #ff004f; */
-  /* padding: 30px; */
-  /* border-radius: 50%; */
-
-  display: flex;
-  margin: 0;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  /* background-color: #fff; */
-  /* height: 100vh; */
-}
-
-.mouse-scroll {
-  /* width: 2.1rem; */
-  padding: 30px 20px 20px 20px;
-  /* height: 4em; */
-  border: solid 2px #fff;
-  border-radius: 50%;
-}
-
-.mouse-scroll i {
-  /* content: ''; */
-  width: 0.4em;
-  height: 0.4em;
-  border-radius: 50%;
-  /* background-color: #ff004f; */
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  /* left: 50%; */
-  /* right: 50%;
-    margin: 0 auto; */
-  right: 0;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  transform: translateX(-50%);
-  animation: scroll 2.5s infinite;
-}
-
-@keyframes scroll {
-  0% {
-    bottom: 80%;
-    opacity: 1;
-  }
-  100% {
-    bottom: 20%;
-    /* opacity: 0; */
-  }
-}
-
 /* .box2{
     display: block;
     width: 20px;
@@ -1124,7 +1069,7 @@ form .btn2 {
 
 @media only screen and (max-width: 725px) {
   .header-text h1 {
-    font-size: 40px;
+    /* font-size: 40px; */
   }
   .header-text {
     font-size: 15px;
@@ -1149,11 +1094,13 @@ form .btn2 {
   .alternate-sevice2 {
     display: block;
   }
-}
 
-@media only screen and (max-width: 581px) {
   .header-text h1 {
-    font-size: 35px;
+    font-size: 45px;
+  }
+
+  .header-text p {
+    font-size: 22px;
   }
   .popup .popup-content {
     width: 90%;
@@ -1163,11 +1110,17 @@ form .btn2 {
 
 @media only screen and (max-width: 511px) {
   .header-text h1 {
-    font-size: 28px;
+    /* font-size: 28px; */
   }
 }
 
 @media only screen and (max-width: 470px) {
+  .header-text h1 {
+    font-size: 38px;
+  }
+  .header-text p {
+    font-size: 20px;
+  }
   .about-col-1 img {
     width: 200px;
     height: auto;
@@ -1180,10 +1133,7 @@ form .btn2 {
 
 @media only screen and (max-width: 405px) {
   .header-text h1 {
-    font-size: 25px;
-  }
-  .header-text {
-    font-size: 13px;
+    font-size: 30px;
   }
 
   .popup .popup-content .popup-text p {
@@ -1199,11 +1149,13 @@ form .btn2 {
 
 @media only screen and (max-width: 362px) {
   .header-text h1 {
-    font-size: 20px;
+    font-size: 26px;
   }
-  .header-text {
-    font-size: 13px;
+
+  .header-text p {
+    font-size: 18px;
   }
+
   .languages ul li {
     font-size: 15px;
   }
