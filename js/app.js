@@ -99,6 +99,7 @@ var typed = new Typed("#typing", options);
 const modals = document.querySelectorAll(".popup");
 const btnCloseModals = document.querySelectorAll(".close-modal");
 const btnsOpenModals = document.querySelectorAll(".show-modal");
+const popupBg = document.querySelectorAll(".pop_bg");
 
 const openModal = function (modal) {
   modal.classList.add("active");
@@ -118,7 +119,7 @@ btnsOpenModals.forEach((btn, index) => {
     closeModal(modals[index]);
   });
 
-  modals[index].addEventListener("click", () => {
+  popupBg[index].addEventListener("click", () => {
     closeModal(modals[index]);
   });
 });
