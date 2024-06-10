@@ -239,44 +239,20 @@ section {
 }
 
 #scroll-up-arrow {
+  display: none;
   background: #ff004f;
-  /* width: 100%; */
   position: fixed;
-  bottom: 40px;
-  right: 10px;
-  padding: 0.5rem;
+  bottom: 50px;
+  right: 4px;
+  padding: 0.3rem;
   border-radius: 50px;
   z-index: 6000;
 }
 #scroll-up-arrow a {
   text-decoration: none;
   color: #fff;
-  font-size: 2.2rem;
+  font-size: 2rem;
 }
-
-/* =====================Background header animation======================= */
-/* .box2{
-    display: block;
-    width: 20px;
-    height: 20px;
-    border-bottom: 3px solid #fff;
-    border-right: 3px solid #fff;
-    transform: rotate(45deg);
-    animation: animation 2s infinite;
-}
-.box1 i{
-    justify-self: center;
-}
-
-.box1:nth-child(2){
-    animation-delay: -0.2s;
-    transform: rotate(45deg) translate(-20px, -20px);
-}
-.box1:nth-child(3){
-    animation-delay: -0.4s;
-}
-
- */
 
 /* ----------------------Services----------------------------- */
 
@@ -838,8 +814,8 @@ section {
 }
 
 .contact-left p {
+  color: #ababab;
   margin-top: 10px;
-  color: #ffffffc5;
   font-size: 17px;
   line-height: 23px;
   padding: 5px;
@@ -1012,6 +988,7 @@ form .btn2 {
     box-shadow: rgba(80, 78, 78, 0.9) -5px 5px 15px;
     z-index: 6000;
     transition: all 0.5s ease;
+    transform: translateX(500px);
   }
   .navbar2 a {
     display: block;
@@ -1116,28 +1093,23 @@ form .btn2 {
     width: 90%;
     overflow-y: scroll;
   }
-}
-
-@media only screen and (max-width: 511px) {
-  /* .header-text h1 {
-    font-size: 28px;
-  } */
+  .cv-btn {
+    padding: 14px 30px;
+  }
 }
 
 @media only screen and (max-width: 470px) {
   .header-text h1 {
     font-size: 38px;
   }
-  /* .header-text p {
-    font-size: 20px;
-  } */
+
   .about-col-1 img {
     width: 200px;
     height: auto;
   }
 
   .contact-left p {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
@@ -1153,7 +1125,7 @@ form .btn2 {
     width: 100px;
   }
   .contact-left p {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
